@@ -1,0 +1,40 @@
+[2019-06-14 09:03:16.836032] INFO: 融合: 规则名称：oracle_lwu0
+[2019-06-14 09:03:16.837033] INFO: 融合: SQL语句：select * from p1_137
+[2019-06-14 09:03:16.926096] INFO: 融合: 当前测试模块 : 敏感sql_oracle类型低风险
+[2019-06-14 09:03:16.926096] INFO: 融合: 当前测试用例及方法 : (<Sensitive_Sql.Func_oracle_re.OracleSqlRe testMethod=test_oracle_re_risk1>,)
+[2019-06-14 09:03:16.927098] INFO: 融合: {'url': '/capaa/v1/featuredefense/sqlFeatureDefense', 'desc': '新增敏感sql规则', 'method': 'POST', 'header': {'Content-Type': 'application/json;charset=UTF-8'}, 'urlParam': {}, 'body': {'name': 'name', 'description': '规则名称', 'dbType': 'Oracle', 'dbId': 1, 'riskLevel': 3, 'status': 1, 'payloadType': 'fuzzySQL', 'payloadContent': 'select\\s*(from|\\s*)\\s+((?!where).)*$'}, 'expected': {'code': '0', 'success': True, 'message': 'success', 'data': None}}
+[2019-06-14 09:03:16.927098] INFO: 融合: 规则名称：oracle_lwu0
+[2019-06-14 09:03:16.927098] INFO: 融合: 当前sql类型：fuzzySQL
+[2019-06-14 09:03:16.927098] INFO: 融合: 新增一条Oracle类型的sql规则
+[2019-06-14 09:03:26.976161] INFO: 融合: 在Oracle客户端执行该语句
+[2019-06-14 09:03:28.868509] INFO: 融合: 删除新增sql规则
+[2019-06-14 09:03:29.001605] INFO: 融合: 规则名称：oracle_y4tx
+[2019-06-14 09:03:29.001605] INFO: 融合: SQL语句：select * from p1_975
+[2019-06-14 09:03:29.053641] INFO: 融合: 当前测试模块 : 敏感sql_oracle类型中风险
+[2019-06-14 09:03:29.053641] INFO: 融合: 当前测试用例及方法 : (<Sensitive_Sql.Func_oracle_re.OracleSqlRe testMethod=test_oracle_re_risk2>,)
+[2019-06-14 09:03:29.053641] INFO: 融合: {'url': '/capaa/v1/featuredefense/sqlFeatureDefense', 'desc': '新增敏感sql规则', 'method': 'POST', 'header': {'Content-Type': 'application/json;charset=UTF-8'}, 'urlParam': {}, 'body': {'name': 'name', 'description': '规则名称', 'dbType': 'Oracle', 'dbId': 1, 'riskLevel': 3, 'status': 1, 'payloadType': 'fuzzySQL', 'payloadContent': 'select\\s*(from|\\s*)\\s+((?!where).)*$'}, 'expected': {'code': '0', 'success': True, 'message': 'success', 'data': None}}
+[2019-06-14 09:03:29.053641] INFO: 融合: 规则名称：oracle_y4tx
+[2019-06-14 09:03:29.053641] INFO: 融合: 当前sql类型：fuzzySQL
+[2019-06-14 09:03:29.053641] INFO: 融合: 新增一条Oracle类型的sql规则
+[2019-06-14 09:03:39.107934] INFO: 融合: 在Oracle客户端执行该语句
+[2019-06-14 09:03:39.164956] INFO: 融合: 删除新增sql规则
+[2019-06-14 09:03:39.269030] INFO: 融合: 规则名称：oracle_0iin
+[2019-06-14 09:03:39.269030] INFO: 融合: SQL语句：select * from p1_963
+[2019-06-14 09:03:39.316064] INFO: 融合: 当前测试模块 : 敏感sql_oracle类型高风险
+[2019-06-14 09:03:39.316064] INFO: 融合: 当前测试用例及方法 : (<Sensitive_Sql.Func_oracle_re.OracleSqlRe testMethod=test_oracle_re_risk3>,)
+[2019-06-14 09:03:39.316064] INFO: 融合: {'url': '/capaa/v1/featuredefense/sqlFeatureDefense', 'desc': '新增敏感sql规则', 'method': 'POST', 'header': {'Content-Type': 'application/json;charset=UTF-8'}, 'urlParam': {}, 'body': {'name': 'name', 'description': '规则名称', 'dbType': 'Oracle', 'dbId': 1, 'riskLevel': 3, 'status': 1, 'payloadType': 'fuzzySQL', 'payloadContent': 'select\\s*(from|\\s*)\\s+((?!where).)*$'}, 'expected': {'code': '0', 'success': True, 'message': 'success', 'data': None}}
+[2019-06-14 09:03:39.317065] INFO: 融合: 规则名称：oracle_0iin
+[2019-06-14 09:03:39.317065] INFO: 融合: 当前sql类型：fuzzySQL
+[2019-06-14 09:03:39.317065] INFO: 融合: 新增一条Oracle类型的sql规则
+[2019-06-14 09:03:49.364271] INFO: 融合: 在Oracle客户端执行该语句
+[2019-06-14 09:03:49.415809] INFO: 融合: 删除新增sql规则
+[2019-06-14 09:03:49.517381] INFO: 融合: 规则名称：oracle_dqmo
+[2019-06-14 09:03:49.517381] INFO: 融合: SQL语句：select * from p1_513
+[2019-06-14 09:03:49.568917] INFO: 融合: 当前测试模块 : 敏感sql_oracle类型极高风险
+[2019-06-14 09:03:49.568917] INFO: 融合: 当前测试用例及方法 : (<Sensitive_Sql.Func_oracle_re.OracleSqlRe testMethod=test_oracle_re_risk4>,)
+[2019-06-14 09:03:49.569417] INFO: 融合: {'url': '/capaa/v1/featuredefense/sqlFeatureDefense', 'desc': '新增敏感sql规则', 'method': 'POST', 'header': {'Content-Type': 'application/json;charset=UTF-8'}, 'urlParam': {}, 'body': {'name': 'name', 'description': '规则名称', 'dbType': 'Oracle', 'dbId': 1, 'riskLevel': 3, 'status': 1, 'payloadType': 'fuzzySQL', 'payloadContent': 'select\\s*(from|\\s*)\\s+((?!where).)*$'}, 'expected': {'code': '0', 'success': True, 'message': 'success', 'data': None}}
+[2019-06-14 09:03:49.569417] INFO: 融合: 规则名称：oracle_dqmo
+[2019-06-14 09:03:49.569417] INFO: 融合: 当前sql类型：fuzzySQL
+[2019-06-14 09:03:49.569918] INFO: 融合: 新增一条Oracle类型的sql规则
+[2019-06-14 09:03:59.619129] INFO: 融合: 在Oracle客户端执行该语句
+[2019-06-14 09:03:59.675170] INFO: 融合: 删除新增sql规则

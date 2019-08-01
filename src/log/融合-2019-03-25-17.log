@@ -1,0 +1,5 @@
+[2019-03-25 17:27:12.134986] INFO: 融合: 当前测试模块 : 敏感sql_oracle类型低风险
+[2019-03-25 17:27:12.135986] INFO: 融合: 当前测试用例及方法 : (<Func_oracle_re.OracleSqlRe testMethod=test_oracle_re_risk1>,)
+[2019-03-25 17:27:12.135986] INFO: 融合: {'SensitiveSql': {'header': {'Content-Type': 'application/json;charset=UTF-8'}, 'increase': {'url': '/capaa/v1/featuredefense/sqlFeatureDefense', 'desc': '新增敏感sql规则', 'method': 'POST', 'urlParam': {}, 'body': {'name': 'name', 'description': '规则名称', 'dbType': 'Oracle', 'dbId': 1, 'riskLevel': 3, 'status': 1, 'payloadType': 'fuzzySQL', 'payloadContent': 'select\\s*(from|\\s*)\\s+((?!where).)*$'}, 'expected': {'success': True, 'message': 'success'}}}, 'WhiteList': {}}
+[2019-03-25 17:27:12.136987] INFO: 融合: 规则名称：name
+[2019-03-25 17:27:12.137987] INFO: 融合: 当前sql语句：select

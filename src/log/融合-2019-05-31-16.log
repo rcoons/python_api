@@ -1,0 +1,79 @@
+[2019-05-31 16:53:40.858141] INFO: 融合: 当前测试模块 : oracle数据库账户管理策略行为属性全部授权放行
+[2019-05-31 16:53:40.870149] INFO: 融合: 当前测试用例及方法 : (<WaterProof.Func_oracle_ddl_on.oracleDdlOn testMethod=test_oracle_accont_on_pass>,)
+[2019-05-31 16:53:40.871150] INFO: 融合: ['user_mgf0', 'user_upga', 'user_09d9', 'user_0nbf', 'user_bvdm']
+[2019-05-31 16:53:40.871150] INFO: 融合: ['create user user_mgf0 identified by tuser1', 'create role user_upga', 'drop user user_09d9 cascade', 'drop role user_0nbf', 'alter user user_bvdm identified by tuser1']
+[2019-05-31 16:53:40.871150] INFO: 融合: 安全策略启用
+[2019-05-31 16:53:45.935757] INFO: 融合: 在oracle客户端执行该语句create user user_mgf0 identified by tuser1
+[2019-05-31 16:53:46.240970] INFO: 融合: 在审计查询里面查找，sql语句应被阻断
+[2019-05-31 16:54:03.520250] INFO: 融合: 安全策略恢复默认
+[2019-05-31 16:54:03.590303] INFO: 融合: 安全策略启用
+[2019-05-31 16:54:08.664424] INFO: 融合: 在oracle客户端执行该语句create role user_upga
+[2019-05-31 16:54:08.756490] INFO: 融合: 在审计查询里面查找，sql语句应被阻断
+[2019-05-31 16:54:26.051785] INFO: 融合: 安全策略恢复默认
+[2019-05-31 16:54:26.214901] INFO: 融合: 安全策略启用
+[2019-05-31 16:54:31.291599] INFO: 融合: 在oracle客户端执行该语句drop user user_09d9 cascade
+[2019-05-31 16:54:31.392583] INFO: 融合: 在审计查询里面查找，sql语句应被阻断
+[2019-05-31 16:54:48.554783] INFO: 融合: 安全策略恢复默认
+[2019-05-31 16:54:48.617830] INFO: 融合: 安全策略启用
+[2019-05-31 16:54:53.689267] INFO: 融合: 在oracle客户端执行该语句drop role user_0nbf
+[2019-05-31 16:54:53.838376] INFO: 融合: 在审计查询里面查找，sql语句应被阻断
+[2019-05-31 16:55:11.007416] INFO: 融合: 安全策略恢复默认
+[2019-05-31 16:55:11.112491] INFO: 融合: 安全策略启用
+[2019-05-31 16:55:16.191053] INFO: 融合: 在oracle客户端执行该语句alter user user_bvdm identified by tuser1
+[2019-05-31 16:55:16.358172] INFO: 融合: 在审计查询里面查找，sql语句应被阻断
+[2019-05-31 16:55:33.654468] INFO: 融合: 安全策略恢复默认
+[2019-05-31 16:55:33.724520] INFO: 融合: 当前测试模块 : oracle数据库对象策略行为属性全部授权放行
+[2019-05-31 16:55:33.724520] INFO: 融合: 当前测试用例及方法 : (<WaterProof.Func_oracle_ddl_on.oracleDdlOn testMethod=test_oracle_object_on_pass>,)
+[2019-05-31 16:55:33.725518] INFO: 融合: ['grant select on sh.times to system', 'grant update on sh.times to system', 'grant delete on sh.times to system', 'grant insert on sh.times to system', 'grant select on sh.abc to system', 'grant update on sh.abc  to system', 'grant delete on sh.abc to system', 'grant insert on sh.abc to system', 'grant select on sys.obj$ to system', 'grant update on sys.t1 to system', 'grant delete on sys.t1 to system', 'grant insert on sys.t1 to system']
+[2019-05-31 16:55:33.725518] INFO: 融合: 安全策略启用
+[2019-05-31 16:55:38.804201] INFO: 融合: 在oracle客户端执行该语句grant select on sh.times to system
+[2019-05-31 16:55:38.941229] INFO: 融合: 在审计查询里面查找，sql语句应被阻断
+[2019-05-31 16:56:13.536823] INFO: 融合: 当前测试模块 : oracle角色权限策略行为属性全部授权放行
+[2019-05-31 16:56:13.537824] INFO: 融合: 当前测试用例及方法 : (<WaterProof.Func_oracle_ddl_on.oracleDdlOn testMethod=test_oracle_role_on_pass>,)
+[2019-05-31 16:56:13.537824] INFO: 融合: ['grant sysdba to system', 'grant dba to system', 'grant imp_full_database to system', 'grant exp_full_database to system']
+[2019-05-31 16:56:13.537824] INFO: 融合: 安全策略启用
+[2019-05-31 16:56:18.621136] INFO: 融合: 在oracle客户端执行该语句grant sysdba to system
+[2019-05-31 16:56:18.717125] INFO: 融合: 在审计查询里面查找，sql语句应被阻断
+[2019-05-31 16:56:35.315102] INFO: 融合: 安全策略恢复默认
+[2019-05-31 16:56:35.418175] INFO: 融合: 安全策略启用
+[2019-05-31 16:56:40.501789] INFO: 融合: 在oracle客户端执行该语句grant dba to system
+[2019-05-31 16:56:40.584849] INFO: 融合: 在审计查询里面查找，sql语句应被阻断
+[2019-05-31 16:56:58.300445] INFO: 融合: 安全策略恢复默认
+[2019-05-31 16:56:58.379502] INFO: 融合: 安全策略启用
+[2019-05-31 16:57:03.513737] INFO: 融合: 在oracle客户端执行该语句grant imp_full_database to system
+[2019-05-31 16:57:03.621793] INFO: 融合: 在审计查询里面查找，sql语句应被阻断
+[2019-05-31 16:57:20.475503] INFO: 融合: 安全策略恢复默认
+[2019-05-31 16:57:20.539565] INFO: 融合: 安全策略启用
+[2019-05-31 16:57:25.613994] INFO: 融合: 在oracle客户端执行该语句grant exp_full_database to system
+[2019-05-31 16:57:25.712064] INFO: 融合: 在审计查询里面查找，sql语句应被阻断
+[2019-05-31 16:57:42.879767] INFO: 融合: 安全策略恢复默认
+[2019-05-31 16:57:42.972834] INFO: 融合: 当前测试模块 : oracle数据库敏感对象策略行为属性全部授权放行
+[2019-05-31 16:57:42.972834] INFO: 融合: 当前测试用例及方法 : (<WaterProof.Func_oracle_ddl_on.oracleDdlOn testMethod=test_oracle_sensitive_object_on_pass>,)
+[2019-05-31 16:57:42.972834] INFO: 融合: ['drop table1 sh.times', 'truncate table2 sh.times', 'alter table3 sh.times drop (c_id)', 'alter table4 sh.times add(id int)']
+[2019-05-31 16:57:42.973848] INFO: 融合: 安全策略启用
+[2019-05-31 16:57:48.042747] INFO: 融合: 在oracle客户端执行该语句drop table1 sh.times
+[2019-05-31 16:57:48.221746] INFO: 融合: 在审计查询里面查找，sql语句应被阻断
+[2019-05-31 16:58:23.280517] INFO: 融合: 当前测试模块 : oracle数据库系统对象策略行为属性全部授权放行
+[2019-05-31 16:58:23.280517] INFO: 融合: 当前测试用例及方法 : (<WaterProof.Func_oracle_ddl_on.oracleDdlOn testMethod=test_oracle_system_object_on_pass>,)
+[2019-05-31 16:58:23.281519] INFO: 融合: ['drop table1 sys.t1', 'truncate table2 sys.t1', 'alter table3 sys.t1 drop (id)', 'alter table4 sys.t1 truncate partition p1', 'alter table5 sys.t1 drop partition p1']
+[2019-05-31 16:58:23.281519] INFO: 融合: 安全策略启用
+[2019-05-31 16:58:28.393191] INFO: 融合: 在oracle客户端执行该语句drop table1 sys.t1
+[2019-05-31 16:58:28.566297] INFO: 融合: 在审计查询里面查找，sql语句应被阻断
+[2019-05-31 16:58:28.797431] INFO: 融合: 安全策略恢复默认
+[2019-05-31 16:58:28.858491] INFO: 融合: 安全策略启用
+[2019-05-31 16:58:33.926154] INFO: 融合: 在oracle客户端执行该语句truncate table2 sys.t1
+[2019-05-31 16:58:34.064178] INFO: 融合: 在审计查询里面查找，sql语句应被阻断
+[2019-05-31 16:59:09.478147] INFO: 融合: 当前测试模块 : oracle数据库系统权限策略行为属性全部授权放行
+[2019-05-31 16:59:09.478147] INFO: 融合: 当前测试用例及方法 : (<WaterProof.Func_oracle_ddl_on.oracleDdlOn testMethod=test_oracle_system_on_pass>,)
+[2019-05-31 16:59:09.479148] INFO: 融合: ['grant create any table to system', 'grant create any procedure to system', 'grant create any view to system', 'grant drop any table to system', 'grant drop any procedure to system', 'grant select any table to system', 'grant insert any table to system', 'grant update any table to system', 'grant delete any table to system']
+[2019-05-31 16:59:09.479148] INFO: 融合: 安全策略启用
+[2019-05-31 16:59:14.572773] INFO: 融合: 在oracle客户端执行该语句grant create any table to system
+[2019-05-31 16:59:14.687852] INFO: 融合: 在审计查询里面查找，sql语句应被阻断
+[2019-05-31 16:59:31.573855] INFO: 融合: 安全策略恢复默认
+[2019-05-31 16:59:31.716976] INFO: 融合: 安全策略启用
+[2019-05-31 16:59:36.789570] INFO: 融合: 在oracle客户端执行该语句grant create any procedure to system
+[2019-05-31 16:59:36.942675] INFO: 融合: 在审计查询里面查找，sql语句应被阻断
+[2019-05-31 16:59:53.598514] INFO: 融合: 安全策略恢复默认
+[2019-05-31 16:59:53.676598] INFO: 融合: 安全策略启用
+[2019-05-31 16:59:58.773194] INFO: 融合: 在oracle客户端执行该语句grant create any view to system
+[2019-05-31 16:59:58.905288] INFO: 融合: 在审计查询里面查找，sql语句应被阻断

@@ -1,0 +1,78 @@
+{
+  "riskconfig": {
+    "url": "/capaa/accessmanage2/saveAssetpropertyOther.do?dbid=%s&assetOwner=&ownerType=%s&additionRule=&auditLevel=%s&status=%s&dangerownerId=%s&part=%s",
+    "desc": "DDL规则设置",
+    "method": "POST",
+    "header": {
+      "Content-Type": "application/json;charset=UTF-8"
+    },
+    "urlParam": {
+    },
+    "body": {
+      "dbid": 1,
+      "assetOwner": "",
+      "ownerType": "database account",
+      "additionRule": "",
+      "auditLevel": 3,
+      "status": 1,
+      "dangerownerId": "1",
+      "part": "danger"
+    }
+  },
+  "oracle": {
+    "accontmanage": {
+      "url": "/capaa/accessmanage2/saveAssetpropertyOther.do?dbid=%s&dbOperationPrivIds=1,2,3,4,5&dbOperationPrivstatus=%s&privNames=DROP USER,CREATE ROLE,DROP ROLE,CHANGE PASSWORD,CREATE USER&dangerownerId=1&part=action",
+      "desc": "DDL规则设置",
+      "method": "POST",
+      "header": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "urlParam": {
+      },
+      "body": {
+        "dbid": 1,
+        "dbOperationPrivIds": "1,2,3,4,5",
+        "dbOperationPrivstatus": "1,1,1,1,1",
+        "privNames": "DROP USER,CREATE ROLE,DROP ROLE,CHANGE PASSWORD,CREATE USER",
+        "dangerownerId": "1",
+        "part": "action"
+      }
+    },
+    "rolepermission": {
+      "url": "/capaa/accessmanage2/saveAssetpropertyOther.do?dbid=%s&dbOperationPrivIds=6,7,8,9&dbOperationPrivstatus=%s&privNames=GRANT SYSDBA,GRANT DBA,GRANT IMP_FULL_DATABASE,GRANT EXP_FULL_DATABASE&dangerownerId=2&part=action",
+      "desc": "DDL规则设置",
+      "method": "POST",
+      "header": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "urlParam": {
+      },
+      "body": {
+        "dbid": 1,
+        "dbOperationPrivIds": "6,7,8,9",
+        "dbOperationPrivstatus": "1,1,1,1",
+        "privNames": "GRANT SYSDBA,GRANT DBA,GRANT IMP_FULL_DATABASE,GRANT EXP_FULL_DATABASE",
+        "dangerownerId": "2",
+        "part": "action"
+      }
+    },
+    "objectpermission": {
+      "url": "/capaa/accessmanage2/saveAssetpropertyOther.do?dbid=%s&dbOperationPrivIds=10,11,12&dbOperationPrivstatus=%s&privNames=GRANT SENSITIVE OBJECT,GRANT SCHEMA OBJECT,GRANT SYS OBJECT&dangerownerId=3&part=action",
+      "desc": "DDL规则设置",
+      "method": "POST",
+      "header": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "urlParam": {
+      },
+      "body": {
+        "dbid": 1,
+        "dbOperationPrivIds": "10,11,12",
+        "dbOperationPrivstatus": "1,1,1",
+        "privNames": "GRANT SENSITIVE OBJECT,GRANT SCHEMA OBJECT,GRANT SYS OBJECT",
+        "dangerownerId": "3",
+        "part": "action"
+      }
+    }
+  }
+}

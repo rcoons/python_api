@@ -1,0 +1,637 @@
+{
+  "createdbserver": {
+    "url": "/capaa/assetProtectObject/create",
+    "descryption": "创建数据库服务",
+    "method": "POST",
+    "header": {
+    },
+    "urlParam": {
+    },
+    "body": {
+      "Linuxoracle12c": {
+        "dbType": 1,
+        "objName": "Linuxoracle12c",
+        "ip": "192.168.202.3",
+        "port": 1521,
+        "runMode": 1,
+        "dbUser": "c##sh",
+        "dbPassword": "sh",
+        "proxyIp": "192.168.51.145",
+        "proxyPort": "8126",
+        "objectType": 1,
+        "nodes": [],
+        "instanceName": "orcl",
+        "serviceName": "orcl"
+      },
+      "oracle12cRAC": {
+        "dbType": 1,
+        "objName": "oracle12cRAC",
+        "ip": "192.168.240.227",
+        "port": 1521,
+        "runMode": 1,
+        "dbUser": "c##sh",
+        "dbPassword": "sh",
+        "proxyIp": "192.168.51.145",
+        "proxyPort": "8221",
+        "objectType": 2,
+        "nodes": [
+          {
+            "key": "add_0",
+            "objName": "node1",
+            "ip": "192.168.240.224",
+            "port": "1521",
+            "instanceName": "pdb1",
+            "proxyIp": "192.168.51.145",
+            "proxyPort": "8222",
+            "addType": "edit",
+            "editable": false
+          },
+          {
+            "key": "add_1",
+            "objName": "node2",
+            "ip": "192.168.240.225",
+            "port": "1521",
+            "instanceName": "pdb2",
+            "proxyIp": "192.168.51.145",
+            "proxyPort": "8223",
+            "addType": "edit",
+            "editable": false
+          },
+          {
+            "key": "add_2",
+            "objName": "node3",
+            "ip": "192.168.240.226",
+            "port": "1521",
+            "instanceName": "pdb3",
+            "proxyIp": "192.168.51.145",
+            "proxyPort": "8224",
+            "addType": "edit",
+            "editable": false
+          }
+        ],
+        "groupId": 0,
+        "serviceName": "orcl"
+      },
+      "sqlserver2016": {
+        "dbType": 2,
+        "objName": "sqlserver2016",
+        "ip": "192.168.225.30",
+        "port": 1434,
+        "runMode": 1,
+        "dbUser": "sa",
+        "dbPassword": "hzmc321#",
+        "proxyIp": "192.168.51.145",
+        "proxyPort": "8122",
+        "objectType": 1,
+        "nodes": []
+      },
+      "Linuxmysql5_6": {
+        "dbType": 3,
+        "objName": "Linuxmysql5_6",
+        "ip": "192.168.202.1",
+        "port": 3306,
+        "runMode": 1,
+        "dbUser": "root",
+        "dbPassword": "mypassword",
+        "proxyIp": "192.168.51.145",
+        "proxyPort": "8121",
+        "objectType": 1,
+        "nodes": []
+      },
+      "DB2_97_CENTOS": {
+        "dbType": 5,
+        "objName": "DB2_97_CENTOS",
+        "ip": "192.168.241.135",
+        "port": 50002,
+        "runMode": 1,
+        "dbUser": "db2inst6",
+        "dbPassword": "oracle",
+        "proxyIp": "192.168.51.145",
+        "proxyPort": "8128",
+        "objectType": 1,
+        "nodes": [],
+        "serviceName": "TEST"
+      },
+      "db2_10_1": {
+        "dbType": 5,
+        "objName": "db2_10_1",
+        "ip": "192.168.241.135",
+        "port": 50005,
+        "runMode": 1,
+        "proxyIp": "192.168.51.145",
+        "proxyPort": "8303",
+        "objectType": 1,
+        "nodes": [],
+        "serviceName": "MYDB"
+      },
+      "gbase_8s83": {
+        "dbType": 7,
+        "objName": "gbase_8s83",
+        "ip": "192.168.238.214",
+        "port": 5258,
+        "runMode": 1,
+        "dbUser": "sysdba",
+        "dbPassword": "gbase",
+        "proxyIp": "192.168.51.145",
+        "proxyPort": "8200",
+        "objectType": 1,
+        "nodes": []
+      },
+      "hive84": {
+        "dbType": 13,
+        "objName": "hive84",
+        "ip": "192.168.238.84",
+        "port": 10000,
+        "runMode": 1,
+        "dbUser": "root",
+        "proxyIp": "192.168.51.145",
+        "proxyPort": "8302",
+        "objectType": 1,
+        "nodes": [],
+        "groupId": 0
+      },
+      "dm43": {
+        "dbType": 8,
+        "objName": "dm43",
+        "ip": "192.168.238.43",
+        "port": 5236,
+        "runMode": 1,
+        "proxyIp": "192.168.51.145",
+        "proxyPort": "8033",
+        "objectType": 1,
+        "nodes": [],
+        "groupId": 0
+      }
+    },
+    "expected": {
+      "code": "0",
+      "success": true,
+      "message": "success",
+      "data": null
+    }
+  },
+  "startOrstopdbservice": {
+    "url": "/capaa/assetProtectObject/startOrStop",
+    "descryption": "启用、关闭数据库",
+    "method": "POST",
+    "header": {
+    },
+    "urlParam": {
+    },
+    "body": {
+      "cmd": "",
+      "ids": []
+    },
+    "expected": {
+      "code": "0",
+      "success": true,
+      "message": "success",
+      "data": null
+    }
+  },
+  "selectdbserver": {
+    "url": "",
+    "descryption": "根据名称查询数据库服务信息",
+    "method": "GET",
+    "header": {
+    },
+    "urlParam": {
+      "byname": "/capaa/assetProtectObject?currentPage=1&pageSize=10&paged=true&objName=%s"
+    },
+    "body": {
+    },
+    "expected": {
+    }
+  },
+  "updatedbserver": {
+    "url": "/capaa/assetProtectObject/update/",
+    "descryption": "编辑数据库信息",
+    "method": "POST",
+    "header": {
+    },
+    "urlParam": {
+    },
+    "body": {
+      "Linuxoracle12c": {
+        "dbType": 1,
+        "objName": "Linuxoracle12c",
+        "ip": "192.168.202.3",
+        "port": "1521",
+        "runMode": 3,
+        "dbUser": "c##sh",
+        "dbPassword": "sh",
+        "proxyIp": "192.168.51.145",
+        "proxyPort": 8126,
+        "objectType": 1,
+        "period": "30",
+        "nodes": [],
+        "groupId": "",
+        "instanceName": "orcl",
+        "serviceName": "orcl"
+      },
+      "oracle12cRAC": {
+        "dbType": 1,
+        "objName": "oracle12cRAC",
+        "ip": "192.168.240.227",
+        "port": "1521",
+        "runMode": 3,
+        "dbUser": "c##sh",
+        "dbPassword": "sh",
+        "proxyIp": "192.168.51.145",
+        "proxyPort": 8221,
+        "objectType": 2,
+        "period": "30",
+        "nodes": [
+          {
+            "port": 1521,
+            "createTime": 1556415117000,
+            "dbUser": null,
+            "runMode": 1,
+            "serviceName": null,
+            "parentId": 61,
+            "objName": "node1",
+            "objId": 62,
+            "dbType": 1,
+            "brId": null,
+            "brName": null,
+            "updateTime": 1556415332000,
+            "status": 1,
+            "proxyPort": 8222,
+            "period": null,
+            "runModeCn": "正式",
+            "ip": "192.168.240.224",
+            "groupId": 0,
+            "dbPassword": null,
+            "proxyIp": "192.168.51.145",
+            "instanceName": "pdb1",
+            "displayDbtype": "Oracle",
+            "nodes": null,
+            "errMsg": null,
+            "objectType": 3,
+            "key": 0
+          },
+          {
+            "port": 1521,
+            "createTime": 1556415117000,
+            "dbUser": null,
+            "runMode": 1,
+            "serviceName": null,
+            "parentId": 61,
+            "objName": "node2",
+            "objId": 63,
+            "dbType": 1,
+            "brId": null,
+            "brName": null,
+            "updateTime": 1556415332000,
+            "status": 1,
+            "proxyPort": 8223,
+            "period": null,
+            "runModeCn": "正式",
+            "ip": "192.168.240.225",
+            "groupId": 0,
+            "dbPassword": null,
+            "proxyIp": "192.168.51.145",
+            "instanceName": "pdb2",
+            "displayDbtype": "Oracle",
+            "nodes": null,
+            "errMsg": null,
+            "objectType": 3,
+            "key": 1
+          },
+          {
+            "port": 1521,
+            "createTime": 1556415117000,
+            "dbUser": null,
+            "runMode": 1,
+            "serviceName": null,
+            "parentId": 61,
+            "objName": "node3",
+            "objId": 64,
+            "dbType": 1,
+            "brId": null,
+            "brName": null,
+            "updateTime": 1556415332000,
+            "status": 1,
+            "proxyPort": 8224,
+            "period": null,
+            "runModeCn": "正式",
+            "ip": "192.168.240.226",
+            "groupId": 0,
+            "dbPassword": null,
+            "proxyIp": "192.168.51.145",
+            "instanceName": "pdb3",
+            "displayDbtype": "Oracle",
+            "nodes": null,
+            "errMsg": null,
+            "objectType": 3,
+            "key": 2
+          }
+        ],
+        "groupId": 0,
+        "serviceName": "orcl"
+      },
+      "Linuxmysql5_6": {
+        "dbType": 3,
+        "objName": "Linuxmysql5_6",
+        "ip": "192.168.202.1",
+        "port": "3306",
+        "runMode": 3,
+        "dbUser": "root",
+        "dbPassword": "mypassword",
+        "proxyIp": "192.168.51.145",
+        "proxyPort": 8121,
+        "objectType": 1,
+        "period": "30",
+        "nodes": [],
+        "groupId": ""
+      },
+      "sqlserver2016": {
+        "dbType": 2,
+        "objName": "sqlserver2016",
+        "ip": "192.168.225.30",
+        "port": "1434",
+        "runMode": 3,
+        "dbUser": "sa",
+        "dbPassword": "hzmc321#",
+        "proxyIp": "192.168.51.145",
+        "proxyPort": 8122,
+        "objectType": 1,
+        "period": "30",
+        "nodes": [],
+        "groupId": ""
+      },
+      "DB2_97_CENTOS": {
+        "dbType": 5,
+        "objName": "DB2_97_CENTOS",
+        "ip": "192.168.241.135",
+        "port": "50002",
+        "runMode": 2,
+        "dbUser": "db2inst6",
+        "dbPassword": "oracle",
+        "proxyIp": "192.168.51.145",
+        "proxyPort": 8128,
+        "objectType": 1,
+        "period": "30",
+        "nodes": [],
+        "groupId": "",
+        "serviceName": "TEST"
+      },
+      "db2_10_1": {
+        "dbType": 5,
+        "objName": "db2_10_1",
+        "ip": "192.168.241.135",
+        "port": "50005",
+        "runMode": 1,
+        "dbUser": null,
+        "dbPassword": "",
+        "proxyIp": "192.168.51.145",
+        "proxyPort": 8303,
+        "objectType": 1,
+        "period": "30",
+        "nodes": [],
+        "groupId": "",
+        "serviceName": "MYDB"
+      },
+      "gbase_8s83": {
+        "dbType": 7,
+        "objName": "gbase_8s83",
+        "ip": "192.168.238.214",
+        "port": "5258",
+        "runMode": 2,
+        "dbUser": "sysdba",
+        "dbPassword": "gbase",
+        "proxyIp": "192.168.51.145",
+        "proxyPort": 8200,
+        "objectType": 1,
+        "period": "30",
+        "nodes": [],
+        "groupId": ""
+      },
+      "hive84": {
+        "dbType": 13,
+        "objName": "hive84",
+        "ip": "192.168.238.84",
+        "port": "10000",
+        "runMode": 1,
+        "dbUser": "root",
+        "dbPassword": "",
+        "proxyIp": "192.168.51.145",
+        "proxyPort": 8302,
+        "objectType": 1,
+        "nodes": [],
+        "groupId": 0
+      },
+      "dm43": {
+        "dbType": 8,
+        "objName": "dm43",
+        "ip": "192.168.238.43",
+        "port": "5236",
+        "runMode": 1,
+        "dbUser": null,
+        "dbPassword": "",
+        "proxyIp": "192.168.51.145",
+        "proxyPort": 8033,
+        "objectType": 1,
+        "nodes": [],
+        "groupId": 0
+      },
+      "sql240_214": {
+        "dbType": 2,
+        "objName": "sql240_214",
+        "ip": "192.168.240.214",
+        "port": "1433",
+        "runMode": 3,
+        "dbUser": "sa",
+        "dbPassword": "root",
+        "proxyIp": "192.168.51.170",
+        "proxyPort": 1505,
+        "objectType": 1,
+        "period": "30",
+        "nodes": [],
+        "groupId": ""
+      },
+      "sql240_133": {
+        "dbType": 2,
+        "objName": "sql240_133",
+        "ip": "192.168.240.133",
+        "port": "1433",
+        "runMode": 3,
+        "dbUser": "sa",
+        "dbPassword": "hzmc321#",
+        "proxyIp": "192.168.51.170",
+        "proxyPort": 1506,
+        "objectType": 1,
+        "period": "30",
+        "nodes": [],
+        "groupId": ""
+      }
+    },
+    "expected": {
+      "code": "0",
+      "success": true,
+      "message": "success",
+      "data": null
+    },
+    "runmode": {
+      "正式": 1,
+      "模拟": 2,
+      "学习": 3
+    }
+  },
+  "connectDB": {
+    "Linuxoracle12c": {
+      "0": {
+        "ip": "192.168.202.3",
+        "port": 1521
+      },
+      "1": {
+        "ip": "192.168.51.145",
+        "port": 8126
+      },
+      "username": "c##sh",
+      "password": "sh",
+      "instanceName": "orcl"
+    },
+    "oracle12cRAC": {
+      "0": {
+        "ip": "192.168.240.227",
+        "port": 1521
+      },
+      "1": {
+        "ip": "192.168.51.145",
+        "port": 8221
+      },
+      "username": "c##sh",
+      "password": "sh",
+      "instanceName": "orcl"
+    },
+    "Linuxmysql5_6": {
+      "0": {
+        "ip": "192.168.202.1",
+        "port": 3306
+      },
+      "1": {
+        "ip": "192.168.51.145",
+        "port": 8121
+      },
+      "username": "root",
+      "password": "mypassword",
+      "db": "test"
+    },
+    "sqlserver2016": {
+      "0": {
+        "ip": "192.168.225.30",
+        "port": 1434
+      },
+      "1": {
+        "ip": "192.168.51.145",
+        "port": 8122
+      },
+      "username": "sa",
+      "password": "hzmc321#",
+      "db": "xjz"
+    },
+    "DB2_97_CENTOS": {
+      "0": {
+        "ip": "192.168.241.135",
+        "port": 50002
+      },
+      "1": {
+        "ip": "192.168.51.145",
+        "port": 8128
+      },
+      "username": "db2inst6",
+      "password": "oracle",
+      "db": "TEST"
+    },
+    "DB2_97_AIX": {
+      "0": {
+        "ip": "192.168.210.80",
+        "port": 50003
+      },
+      "1": {
+        "ip": "192.168.51.145",
+        "port": 8129
+      },
+      "username": "db2inst3",
+      "password": "db2inst3",
+      "db": "TEST"
+    },
+    "db2_10_1": {
+      "0": {
+        "ip": "192.168.241.135",
+        "port": 50005
+      },
+      "1": {
+        "ip": "192.168.51.145",
+        "port": 8303
+      },
+      "username": "db2inst5",
+      "password": "oracle",
+      "db": "MYDB"
+    },
+    "gbase_8s83": {
+      "0": {
+        "ip": "192.168.238.214",
+        "port": 5258
+      },
+      "1": {
+        "ip": "192.168.51.145",
+        "port": 8200
+      },
+      "username": "sysdba",
+      "password": "gbase",
+      "db": "ylhzmc"
+    },
+    "hive84": {
+      "0": {
+        "ip": "192.168.238.84",
+        "port": 10000
+      },
+      "1": {
+        "ip": "192.168.51.145",
+        "port": 8302
+      },
+      "username": "root",
+      "password": "123456"
+    },
+    "dm43": {
+      "0": {
+        "ip": "192.168.238.43",
+        "port": 5236
+      },
+      "1": {
+        "ip": "192.168.51.145",
+        "port": 8033
+      },
+      "username": "sysdba",
+      "password": "hzmc4321$"
+    },
+    "sql240_214": {
+      "0": {
+        "ip": "192.168.240.214",
+        "port": 1433
+      },
+      "1": {
+        "ip": "192.168.51.170",
+        "port": 1505
+      },
+      "username": "sa",
+      "password": "root",
+      "db": "test_zn"
+    },
+    "sql240_133": {
+      "0": {
+        "ip": "192.168.240.133",
+        "port": 1433
+      },
+      "1": {
+        "ip": "192.168.51.170",
+        "port": 1506
+      },
+      "username": "sa",
+      "password": "hzmc321#",
+      "db": "test"
+    }
+  }
+}

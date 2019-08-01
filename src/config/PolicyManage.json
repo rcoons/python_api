@@ -1,0 +1,483 @@
+{
+  "SensitiveSql": {
+    "increase": {
+      "url": "/capaa/v1/featuredefense/sqlFeatureDefense",
+      "desc": "新增敏感sql规则",
+      "method": "POST",
+      "header": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "urlParam": {
+      },
+      "body": {
+        "name": "name",
+        "description": "规则名称",
+        "dbType": "Oracle",
+        "dbId": 1,
+        "riskLevel": 3,
+        "status": 1,
+        "payloadType": "fuzzySQL",
+        "payloadContent": "select\\s*(from|\\s*)\\s+((?!where).)*$"
+      },
+      "expected": {
+        "code": "0",
+        "success": true,
+        "message": "success",
+        "data": null
+      }
+    },
+    "rulerlist": {
+      "url": "/capaa/v1/featuredefense/sqlFeatureDefense?currentPage=1&pageSize=10&paged=true",
+      "desc": "获取敏感sql规则列表",
+      "method": "GET",
+      "header": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "urlParam": {
+      },
+      "expected": {
+        "success": true,
+        "message": "success",
+        "data": {}
+      }
+    },
+    "delete": {
+      "url": "/capaa/v1/featuredefense/sqlFeatureDefense/batch",
+      "desc": "删除敏感sql规则",
+      "method": "POST",
+      "header": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "urlParam": {
+      },
+      "body": {
+        "action": 2,
+        "sqlFeatureDefenseIdList": [
+          61
+        ]
+      },
+      "expected": {
+        "success": true,
+        "message": "success"
+      }
+    },
+    "edit": {
+      "url": "/capaa/v1/featuredefense/sqlFeatureDefense/%s?cmd=update",
+      "desc": "编辑敏感sql规则",
+      "method": "POST",
+      "header": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "urlParam": {
+      },
+      "body": {
+        "name": "name",
+        "description": "name",
+        "dbType": "dbtype",
+        "dbId": "dbId",
+        "riskLevel": "risk",
+        "status": 1,
+        "payloadType": "sqlType",
+        "payloadContent": "sql"
+      },
+      "expected": {
+        "success": true,
+        "message": "success"
+      }
+    },
+    "addsensql": {
+      "url": "/capaa/v1/featuredefense/fromaudit/adnhup325k2qn",
+      "desc": "从审计记录添加到敏感sql",
+      "method": "POST",
+      "header": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "urlParam": {
+      },
+      "body": {
+        "name": "123456",
+        "description": "123456",
+        "riskLevel": "1",
+        "dbName": "LINUXORACLE12C"
+      }
+    },
+    "authorization": {
+      "url": "/capaa/v1/featuredefense/sqlFeatureDefense/%s/authorization",
+      "desc": "授权",
+      "method": "POST",
+      "header": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "urlParam": {
+      },
+      "body": [
+        1027
+      ]
+    },
+    "getauthor": {
+      "url": "/capaa/v1/featuredefense/sqlFeatureDefense/%s",
+      "desc": "授权验证",
+      "method": "GET",
+      "header": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "urlParam": [
+        1027
+      ],
+      "body": [
+        1027
+      ]
+    }
+  },
+  "WhiteList": {
+    "increase": {
+      "url": "/capaa/dbfirewall/sqlWhiteList",
+      "desc": "新增白名单",
+      "method": "POST",
+      "header": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "urlParam": {
+      },
+      "body": {
+        "sqlText": "name",
+        "sqlTextFormatted": "sqltext",
+        "dbType": 1,
+        "dbserverId": 1,
+        "app": "SQLPLUS"
+      },
+      "expected": {
+        "code": "0",
+        "success": true,
+        "message": "success",
+        "data": null
+      }
+    },
+    "addsensql": {
+      "url": "/capaa/v1/featuredefense/transfor",
+      "desc": "添加到敏感sql",
+      "method": "POST",
+      "header": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "urlParam": {
+      },
+      "body": {
+        "id": "whiteID",
+        "description": "name",
+        "name": "name",
+        "riskLevel": 3
+      },
+      "expected": {
+        "code": "0",
+        "success": true,
+        "message": "success",
+        "data": null
+      }
+    },
+    "whitelist": {
+      "url": "/capaa/dbfirewall/sqlWhiteList?black=false&currentPage=1&pageSize=10&paged=true",
+      "desc": "获取白名单列表",
+      "method": "GET",
+      "header": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "urlParam": {
+      },
+      "body": {
+      },
+      "expected": {
+        "code": "0",
+        "success": true,
+        "message": "success",
+        "data": null
+      }
+    },
+    "status": {
+      "url": "/capaa/dbfirewall/mutiOperate/sql",
+      "desc": "白名单状态切换",
+      "method": "POST",
+      "header": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "urlParam": {
+      },
+      "body": {
+        "cmdType": "stop",
+        "ids": [
+          58
+        ]
+      },
+      "expected": {
+        "status": true,
+        "msg": "状态更新成功！"
+      }
+    },
+    "clear": {
+      "url": "/capaa/dbfirewall/whiteListClear/sql",
+      "desc": "白名单清空",
+      "method": "POST",
+      "header": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "urlParam": {
+      },
+      "body": {
+      },
+      "expected": {
+        "code": "0",
+        "success": true,
+        "message": "操作成功",
+        "data": null
+      }
+    }
+  },
+  "SqlInject": {
+    "add_diy_rule": {
+      "url": "/capaa/dbfirewall/virtualpatching/div",
+      "desc": "新增sql注入特征库(漏洞特征库)自定义规则",
+      "method": "POST",
+      "header": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "urlParam": {
+      },
+      "body": {
+        "chsName": "普通风险",
+        "dbType": "all",
+        "riskLevel": 3,
+        "vpStatus": 1,
+        "payload": "regex",
+        "content": "^select\\s*(from|\\s*)\\s+((?!where).)*$",
+        "vpDescription": "风险描述",
+        "isDiy": 1,
+        "ruleType": 0
+      },
+      "expected": {
+        "status": true,
+        "msg": "添加成功！"
+      },
+      "param": {
+        "dbType": [
+          "all",
+          "oracle",
+          "sqlserver",
+          "mysql"
+        ],
+        "riskLevel": [
+          "byrisklevel",
+          1,
+          2,
+          3,
+          4
+        ],
+        "风险级别": {
+          "低": "风险级别：低",
+          "中": "风险级别：中",
+          "高": "风险级别：高",
+          "极高": "风险级别：极高",
+          "安全": "风险级别：安全"
+        },
+        "响应行为": {
+          "告警": "响应行为：告警",
+          "阻断行为": "响应行为：阻断行为",
+          "模拟阻断": "响应行为：模拟阻断",
+          "通过": "响应行为：通过"
+        },
+        "vpStatus": [
+          "bystatus",
+          0,
+          1
+        ],
+        "ruleType": {
+          "sql注入特征库": 0,
+          "漏洞特征库": 1
+        }
+      }
+    },
+    "select_diy_rule": {
+      "url": "",
+      "desc": "查询自定义规则",
+      "method": "GET",
+      "header": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "urlParam": {
+        "byname": "/capaa/dbfirewall/featureLib?currentPage=1&pageSize=10&paged=true&riskName=%s&sortKey=&sortOrder=",
+        "byrisklevel": "/capaa/dbfirewall/featureLib?currentPage=1&pageSize=10&paged=true&riskLevel=%s&sortKey=&sortOrder=",
+        "bystatus": "/capaa/dbfirewall/featureLib?currentPage=1&pageSize=10&paged=true&status=%s&sortKey=&sortOrder="
+      },
+      "body": {
+        "name": ""
+      },
+      "expected": {
+      },
+      "param": {
+      }
+    },
+    "mutiOperate_diy_rule": {
+      "url": "/capaa/dbfirewall/virtualpatching/mutiOperate",
+      "desc": "操作(删除、启用、停用)自定义规则",
+      "method": "POST",
+      "header": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "urlParam": {
+      },
+      "body": {
+        "start": {
+          "cmdType": "start",
+          "ids": []
+        },
+        "stop": {
+          "cmdType": "stop",
+          "ids": []
+        },
+        "delete": {
+          "cmdType": "delete",
+          "ids": []
+        }
+      },
+      "expected": {
+        "delete": {
+          "status": true,
+          "msg": "删除成功"
+        },
+        "start": {
+          "status": true,
+          "msg": "状态更新成功"
+        },
+        "stop": {
+          "status": true,
+          "msg": "状态更新成功"
+        }
+      },
+      "param": {
+      }
+    },
+    "update_diy_rule": {
+      "url": "/capaa/dbfirewall/virtualpatching/update/",
+      "desc": "编辑sql注入特征库(漏洞特征库)自定义规则",
+      "method": "POST",
+      "header": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "urlParam": {
+      },
+      "body": {
+        "chsName": "编辑规则",
+        "dbType": "oracle",
+        "riskLevel": 1,
+        "vpStatus": 0,
+        "payload": "regex",
+        "content": "^select\\s*(from|\\s*)\\s+((?!where).)*$",
+        "vpDescription": "编辑风险描述",
+        "isDiy": 1,
+        "ruleType": 0
+      },
+      "expected": {
+        "status": true,
+        "msg": "更新成功"
+      },
+      "param": {
+      }
+    },
+    "view_diy_rule": {
+      "url": "/capaa/dbfirewall/virtualpatching/one/",
+      "desc": "查看某条规则信息",
+      "method": "GET",
+      "header": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "expected": {
+      }
+    }
+  },
+  "Virtualpatch": {
+    "select_diy_rule": {
+      "url": "",
+      "desc": "查询漏洞特征库自定义规则",
+      "method": "GET",
+      "header": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "urlParam": {
+        "byname": "/capaa/dbfirewall/bgFeatureLib?currentPage=1&pageSize=10&paged=true&bugName=%s&sortKey=&sortOrder=",
+        "byrisklevel": "/capaa/dbfirewall/featureLib?currentPage=1&pageSize=10&paged=true&riskLevel=%s&sortKey=&sortOrder=",
+        "bystatus": "/capaa/dbfirewall/bgFeatureLib?currentPage=1&pageSize=10&paged=true&status=%s&sortKey=&sortOrder="
+      },
+      "body": {
+      },
+      "expected": {
+      },
+      "param": {
+      }
+    },
+    "namelist": [
+      "Linuxoracle12c",
+      "oracle12cRAC",
+      "Linuxmysql5_6",
+      "sqlserver2016",
+      "DB2_97_CENTOS",
+      "gbase_8s83",
+      "hive84",
+      "dm43",
+      "db2_10_1"
+    ]
+  },
+  "dbSecurityconfig": {
+    "update": {
+      "url": "/capaa/dbfirewall/sqlWhiteListSetting/update?cmd=update",
+      "desc": "编辑安全防御开关",
+      "method": "POST",
+      "header": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "body": {
+        "rule": {
+          "type": -1,
+          "dispose": 0
+        },
+        "access": {
+          "status": 0,
+          "cyc": "s"
+        },
+        "returnCount": {
+          "status": 0
+        },
+        "dbIds": [
+          1
+        ],
+        "riskScope": 1,
+        "featuresStatus": 0,
+        "virStatus": 0,
+        "applyScope": 1,
+        "dataMaskStatusB": 0,
+        "dataMaskStatusOM": 0
+      },
+      "expected": {
+        "code": "0",
+        "success": true,
+        "message": "success",
+        "data": null
+      }
+    },
+    "select": {
+      "uri": {
+        "virStatus": "/capaa/dbfirewall/sqlWhiteListSetting?currentPage=1&pageSize=10&paged=true&virStatus=",
+        "dbname": "/capaa/dbfirewall/sqlWhiteListSetting?currentPage=1&pageSize=10&paged=true&dbname=",
+        "featuresStatus": "/capaa/dbfirewall/sqlWhiteListSetting?currentPage=1&pageSize=10&paged=true&featuresStatus="
+      },
+      "desc": "安全防御设置-条件查询",
+      "method": "GET"
+    },
+    "nopage":{
+      "uri":"/capaa/dbfirewall/sqlWhiteListSetting/nopage",
+      "desc": "获取所有数据库服务信息",
+      "method": "GET"
+    }
+  }
+}
+
+
+

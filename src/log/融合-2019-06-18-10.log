@@ -1,0 +1,52 @@
+[2019-06-18 10:03:59.714825] INFO: 融合: 规则名称：oracle_siho
+[2019-06-18 10:03:59.715826] INFO: 融合: SQL语句：select * from p1_283
+[2019-06-18 10:03:59.763858] INFO: 融合: 当前测试模块 : 敏感sql_oracle类型低风险
+[2019-06-18 10:03:59.763858] INFO: 融合: 当前测试用例及方法 : (<Sensitive_Sql.Func_oracle_re.OracleSqlRe testMethod=test_oracle_re_risk1>,)
+[2019-06-18 10:03:59.763858] INFO: 融合: {'url': '/capaa/v1/featuredefense/sqlFeatureDefense', 'desc': '新增敏感sql规则', 'method': 'POST', 'header': {'Content-Type': 'application/json;charset=UTF-8'}, 'urlParam': {}, 'body': {'name': 'name', 'description': '规则名称', 'dbType': 'Oracle', 'dbId': 1, 'riskLevel': 3, 'status': 1, 'payloadType': 'fuzzySQL', 'payloadContent': 'select\\s*(from|\\s*)\\s+((?!where).)*$'}, 'expected': {'code': '0', 'success': True, 'message': 'success', 'data': None}}
+[2019-06-18 10:03:59.763858] INFO: 融合: 规则名称：oracle_siho
+[2019-06-18 10:03:59.763858] INFO: 融合: 当前sql类型：fuzzySQL
+[2019-06-18 10:03:59.764861] INFO: 融合: 新增一条Oracle类型的sql规则
+[2019-06-18 10:04:09.811003] INFO: 融合: 在Oracle客户端执行该语句
+[2019-06-18 10:04:10.066249] INFO: 融合: 在审计查询里面查找，sql语句应被阻断
+[2019-06-18 10:04:26.874120] INFO: 融合: 在MySQL客户端执行该语句
+[2019-06-18 10:04:26.899140] INFO: 融合: 在审计查询里面查找，sql语句应不被阻断
+[2019-06-18 10:04:43.504938] INFO: 融合: 删除新增sql规则
+[2019-06-18 10:04:43.604022] INFO: 融合: 规则名称：oracle_lwha
+[2019-06-18 10:04:43.605027] INFO: 融合: SQL语句：select * from p1_739
+[2019-06-18 10:04:43.652042] INFO: 融合: 当前测试模块 : 敏感sql_oracle类型中风险
+[2019-06-18 10:04:43.652042] INFO: 融合: 当前测试用例及方法 : (<Sensitive_Sql.Func_oracle_re.OracleSqlRe testMethod=test_oracle_re_risk2>,)
+[2019-06-18 10:04:43.652042] INFO: 融合: {'url': '/capaa/v1/featuredefense/sqlFeatureDefense', 'desc': '新增敏感sql规则', 'method': 'POST', 'header': {'Content-Type': 'application/json;charset=UTF-8'}, 'urlParam': {}, 'body': {'name': 'name', 'description': '规则名称', 'dbType': 'Oracle', 'dbId': 1, 'riskLevel': 3, 'status': 1, 'payloadType': 'fuzzySQL', 'payloadContent': 'select\\s*(from|\\s*)\\s+((?!where).)*$'}, 'expected': {'code': '0', 'success': True, 'message': 'success', 'data': None}}
+[2019-06-18 10:04:43.652042] INFO: 融合: 规则名称：oracle_lwha
+[2019-06-18 10:04:43.652042] INFO: 融合: 当前sql类型：fuzzySQL
+[2019-06-18 10:04:43.652042] INFO: 融合: 新增一条Oracle类型的sql规则
+[2019-06-18 10:04:53.699265] INFO: 融合: 在Oracle客户端执行该语句
+[2019-06-18 10:04:53.809265] INFO: 融合: 在审计查询里面查找，sql语句应被阻断
+[2019-06-18 10:05:10.417463] INFO: 融合: 在MySQL客户端执行该语句
+[2019-06-18 10:05:10.441477] INFO: 融合: 在审计查询里面查找，sql语句应不被阻断
+[2019-06-18 10:05:26.856457] INFO: 融合: 删除新增sql规则
+[2019-06-18 10:05:26.968537] INFO: 融合: 规则名称：oracle_23do
+[2019-06-18 10:05:26.968537] INFO: 融合: SQL语句：select * from p1_434
+[2019-06-18 10:05:27.014570] INFO: 融合: 当前测试模块 : 敏感sql_oracle类型高风险
+[2019-06-18 10:05:27.014570] INFO: 融合: 当前测试用例及方法 : (<Sensitive_Sql.Func_oracle_re.OracleSqlRe testMethod=test_oracle_re_risk3>,)
+[2019-06-18 10:05:27.015571] INFO: 融合: {'url': '/capaa/v1/featuredefense/sqlFeatureDefense', 'desc': '新增敏感sql规则', 'method': 'POST', 'header': {'Content-Type': 'application/json;charset=UTF-8'}, 'urlParam': {}, 'body': {'name': 'name', 'description': '规则名称', 'dbType': 'Oracle', 'dbId': 1, 'riskLevel': 3, 'status': 1, 'payloadType': 'fuzzySQL', 'payloadContent': 'select\\s*(from|\\s*)\\s+((?!where).)*$'}, 'expected': {'code': '0', 'success': True, 'message': 'success', 'data': None}}
+[2019-06-18 10:05:27.015571] INFO: 融合: 规则名称：oracle_23do
+[2019-06-18 10:05:27.015571] INFO: 融合: 当前sql类型：fuzzySQL
+[2019-06-18 10:05:27.015571] INFO: 融合: 新增一条Oracle类型的sql规则
+[2019-06-18 10:05:37.065225] INFO: 融合: 在Oracle客户端执行该语句
+[2019-06-18 10:05:37.189332] INFO: 融合: 在审计查询里面查找，sql语句应被阻断
+[2019-06-18 10:05:53.874169] INFO: 融合: 在MySQL客户端执行该语句
+[2019-06-18 10:05:53.901189] INFO: 融合: 在审计查询里面查找，sql语句应不被阻断
+[2019-06-18 10:06:10.441956] INFO: 融合: 删除新增sql规则
+[2019-06-18 10:06:10.532002] INFO: 融合: 规则名称：oracle_g2u1
+[2019-06-18 10:06:10.532002] INFO: 融合: SQL语句：select * from p1_714
+[2019-06-18 10:06:10.600050] INFO: 融合: 当前测试模块 : 敏感sql_oracle类型极高风险
+[2019-06-18 10:06:10.600050] INFO: 融合: 当前测试用例及方法 : (<Sensitive_Sql.Func_oracle_re.OracleSqlRe testMethod=test_oracle_re_risk4>,)
+[2019-06-18 10:06:10.601051] INFO: 融合: {'url': '/capaa/v1/featuredefense/sqlFeatureDefense', 'desc': '新增敏感sql规则', 'method': 'POST', 'header': {'Content-Type': 'application/json;charset=UTF-8'}, 'urlParam': {}, 'body': {'name': 'name', 'description': '规则名称', 'dbType': 'Oracle', 'dbId': 1, 'riskLevel': 3, 'status': 1, 'payloadType': 'fuzzySQL', 'payloadContent': 'select\\s*(from|\\s*)\\s+((?!where).)*$'}, 'expected': {'code': '0', 'success': True, 'message': 'success', 'data': None}}
+[2019-06-18 10:06:10.601051] INFO: 融合: 规则名称：oracle_g2u1
+[2019-06-18 10:06:10.601051] INFO: 融合: 当前sql类型：fuzzySQL
+[2019-06-18 10:06:10.601051] INFO: 融合: 新增一条Oracle类型的sql规则
+[2019-06-18 10:06:20.656197] INFO: 融合: 在Oracle客户端执行该语句
+[2019-06-18 10:06:20.727247] INFO: 融合: 在审计查询里面查找，sql语句应被阻断
+[2019-06-18 10:06:37.254774] INFO: 融合: 在MySQL客户端执行该语句
+[2019-06-18 10:06:37.271794] INFO: 融合: 在审计查询里面查找，sql语句应不被阻断
+[2019-06-18 10:06:53.931714] INFO: 融合: 删除新增sql规则

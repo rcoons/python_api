@@ -1,0 +1,17 @@
+[2019-05-31 17:56:21.734542] INFO: 融合: 当前测试模块 : hive数据库账户管理策略行为属性全部授权放行
+[2019-05-31 17:56:21.735544] INFO: 融合: 当前测试用例及方法 : (<WaterProof.Func_hive_ddl_on.HiveDdlOn testMethod=test_hive_accont_on_pass>,)
+[2019-05-31 17:56:21.735544] INFO: 融合: ['user_gz7k', 'user_n17n']
+[2019-05-31 17:56:21.735544] INFO: 融合: ['create role user_gz7k', 'drop role user_n17n']
+[2019-05-31 17:56:21.735544] INFO: 融合: 安全策略启用
+[2019-05-31 17:56:26.790528] INFO: 融合: 在hive客户端执行该语句create role user_gz7k
+[2019-05-31 17:57:12.911091] INFO: 融合: 在审计查询里面查找，sql语句应被阻断
+[2019-05-31 17:57:29.402464] INFO: 融合: 安全策略恢复默认
+[2019-05-31 17:57:29.464720] INFO: 融合: 安全策略启用
+[2019-05-31 17:57:34.540757] INFO: 融合: 在hive客户端执行该语句drop role user_n17n
+[2019-05-31 17:58:20.438842] INFO: 融合: 在审计查询里面查找，sql语句应被阻断
+[2019-05-31 17:58:37.995427] INFO: 融合: 安全策略恢复默认
+[2019-05-31 17:58:38.063665] INFO: 融合: 当前测试模块 : hive数据库对象策略行为属性全部授权放行
+[2019-05-31 17:58:38.063665] INFO: 融合: 当前测试用例及方法 : (<WaterProof.Func_hive_ddl_on.HiveDdlOn testMethod=test_hive_object_on_pass>,)
+[2019-05-31 17:58:38.063665] INFO: 融合: ["grant select, insert, update, delete on testdb.* to user_yw0w@'%'", "grant select, insert, update, delete on temp.temp1 to user_ai35@'%'", "grant select, insert, update, delete on sys.sys1 to user_aoh1@'%'"]
+[2019-05-31 17:58:38.063665] INFO: 融合: 安全策略启用
+[2019-05-31 17:58:43.153255] INFO: 融合: 在hive客户端执行该语句grant select, insert, update, delete on testdb.* to user_yw0w@'%'

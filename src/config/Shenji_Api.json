@@ -1,0 +1,16 @@
+{
+  "search": {
+    "url": "/capaa/auditsearch/simpleSearch.do?ds=1&time_range=1&kw=%s&sqltext=%s",
+    "desc": "访问事件条件搜索",
+    "method": "POST",
+    "header": {
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    "body": {
+      "ds": 1,
+      "time_range": 1,
+      "kw": "",
+      "sqltext": ""
+    }
+  }
+}

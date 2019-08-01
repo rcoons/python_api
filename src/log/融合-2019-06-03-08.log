@@ -1,0 +1,11 @@
+[2019-06-03 08:55:13.583815] INFO: 融合: 当前测试模块 : oracle数据库账户管理策略行为属性全部授权放行
+[2019-06-03 08:55:13.584816] INFO: 融合: 当前测试用例及方法 : (<WaterProof.Func_oracle_ddl_on.oracleDdlOn testMethod=test_oracle_accont_on_pass>,)
+[2019-06-03 08:55:13.584816] INFO: 融合: ['user_fod2', 'user_mbiu', 'user_m9d3', 'user_lwnv', 'user_wr4g']
+[2019-06-03 08:55:13.584816] INFO: 融合: ['create user user_fod2 identified by tuser1', 'create role user_mbiu', 'drop user user_m9d3 cascade', 'drop role user_lwnv', 'alter user user_wr4g identified by tuser1']
+[2019-06-03 08:55:13.584816] INFO: 融合: 安全策略启用
+[2019-06-03 08:55:18.655427] INFO: 融合: 在oracle客户端执行该语句create user user_fod2 identified by tuser1
+[2019-06-03 08:55:19.859312] INFO: 融合: 在审计查询里面查找，sql语句应被阻断
+[2019-06-03 08:55:36.487229] INFO: 融合: 安全策略恢复默认
+[2019-06-03 08:55:36.558305] INFO: 融合: 安全策略启用
+[2019-06-03 08:55:41.636584] INFO: 融合: 在oracle客户端执行该语句create role user_mbiu
+[2019-06-03 08:55:41.789598] INFO: 融合: 在审计查询里面查找，sql语句应被阻断
